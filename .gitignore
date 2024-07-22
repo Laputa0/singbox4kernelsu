@@ -1,0 +1,7 @@
+.parcel-cache/
+node_modules/
+dist/
+webroot/
+package.json
+pkg.sh
+yarn.lock
