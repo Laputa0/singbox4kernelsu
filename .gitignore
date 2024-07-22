@@ -5,3 +5,5 @@ webroot/
 package.json
 pkg.sh
 yarn.lock
+etc/config.json
+etc/outbounds.json
