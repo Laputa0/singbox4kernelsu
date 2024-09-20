@@ -1,2 +1,2 @@
-# syncthing4kernelsu
-syncthing for kernelsu
+# singbox4kernelsu
+sing-box for kernelsu
