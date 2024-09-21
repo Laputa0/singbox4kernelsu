@@ -1,0 +1,101 @@
+{
+    "outbounds": [
+        {
+            "type": "hysteria2",
+            "tag": "cc_hy2",
+            "server": "",
+            "server_port": 443,
+            "up_mbps": 100,
+            "down_mbps": 1000,
+            "password": "user0:a7898da0-0fc5-4a72-a9ae-86d6c761e742",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.bing.com",
+                "insecure": true
+            }
+        },
+        {
+            "type": "hysteria2",
+            "tag": "kds_hy2",
+            "server": "",
+            "server_port": 443,
+            "up_mbps": 100,
+            "down_mbps": 1000,
+            "password": "user0:c2782977-c611-418b-98d0-9361418a7194",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.bing.com",
+                "insecure": true
+            }
+        },
+        {
+            "type": "dns",
+            "tag": "dns_out"
+        },
+        {
+            "type": "direct",
+            "tag": "net_direct"
+        },
+        {
+            "type": "block",
+            "tag": "net_block"
+        },
+        {
+            "type": "urltest",
+            "tag": "urltest_all",
+            "outbounds": [
+                "cc_hy2",
+                "kds_hy2"
+            ],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50,
+            "idle_timeout": "30m",
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "proxy_default",
+            "outbounds": [
+                "cc_hy2",
+                "kds_hy2",
+                "net_direct"
+            ],
+            "default": "cc_hy2",
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "proxy_openai",
+            "outbounds": [
+                "cc_hy2",
+                "kds_hy2",
+                "proxy_default"
+            ],
+            "default": "proxy_default",
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "proxy_google",
+            "outbounds": [
+                "cc_hy2",
+                "kds_hy2",
+                "proxy_default"
+            ],
+            "default": "proxy_default",
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "proxy_telegram",
+            "outbounds": [
+                "cc_hy2",
+                "kds_hy2",
+                "proxy_default"
+            ],
+            "default": "proxy_default",
+            "interrupt_exist_connections": true
+        }
+    ]
+}

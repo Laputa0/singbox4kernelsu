@@ -1,26 +1,10 @@
 {
     "inbounds": [
         {
-            "type": "tproxy",
-            "tag": "tproxy-in",
-            "listen": "::",
-            "listen_port": 10101,
-            "sniff": true,
-            "sniff_override_destination": false
-        },
-        {
             "type": "socks",
             "tag": "socks-in",
             "listen": "::",
-            "listen_port": 10808,
-            "sniff": true,
-            "sniff_override_destination": false
-        },
-        {
-            "type": "socks",
-            "tag": "socks-dns",
-            "listen": "::",
-            "listen_port": 10900,
+            "listen_port": 20808,
             "sniff": true,
             "sniff_override_destination": false
         },
@@ -28,20 +12,20 @@
             "type": "http",
             "tag": "http-in",
             "listen": "::",
-            "listen_port": 10809,
+            "listen_port": 20809,
             "sniff": true,
             "sniff_override_destination": false
         },
         {
             "type": "tun",
             "tag": "tun-in",
-            "interface_name": "tun0",
+            "interface_name": "tun1f",
             "address": [
-                "172.19.0.1/16",
-                "fd13::1/64"
+                "172.31.0.1/16",
+                "fd1f::1/64"
             ],
             "mtu": 9000,
-            "gso": true,
+            "gso": false,
             "auto_route": true,
             "auto_redirect": false,
             "strict_route": true,
@@ -49,8 +33,10 @@
                 "0.0.0.0/0",
                 "::/0"
             ],
-            "route_exclude_address": [],
-            "route_address_set": [],
+            "route_exclude_address": [
+                "127.0.0.0/8",
+                "::1/128"
+            ],
             "endpoint_independent_nat": false,
             "stack": "system",
             "sniff": true,

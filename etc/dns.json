@@ -9,7 +9,7 @@
             {
                 "tag": "dns-remote",
                 "address": "https://1.1.1.1/dns-query",
-                "detour": "net_direct"
+                "detour": "proxy_default"
             }
         ],
         "rules": [

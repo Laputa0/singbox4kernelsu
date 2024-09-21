@@ -2,7 +2,7 @@
   "log": {
     "disabled": false,
     "level": "info",
-    "output": "",
+    "output": "BOX_LOG_PATH",
     "timestamp": true
   }
 }

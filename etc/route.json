@@ -1,13 +1,12 @@
 {
   "route": {
     "rules": [
-      // {
-      //   "rule_set": [
-      //     "geosite-adblockplus",
-      //     "geoip-ad"
-      //   ],
-      //   "outbound": "net_block"
-      // },
+      {
+        "protocol": [
+          "dns"
+        ],
+        "outbound": "dns_out"
+      },
       {
         "ip_is_private": true,
         "outbound": "net_direct"
@@ -18,12 +17,6 @@
           "geoip-cn"
         ],
         "outbound": "net_direct"
-      },
-      {
-        "inbound": [
-          "socks-dns"
-        ],
-        "outbound": "proxy_dns"
       },
       {
         "rule_set": [
@@ -47,6 +40,7 @@
       }
     ],
     "final": "proxy_default",
-    "auto_detect_interface": true
+    "auto_detect_interface": true,
+    "override_android_vpn": false
   }
 }

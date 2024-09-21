@@ -1,6 +1,6 @@
 id=sing-box
 name=sing-box for KernelSU
-version=1.2
-versionCode=240921
+version=2.0
+versionCode=240922
 author=laputa
-description=sing-box for KernelSU
+description=switch by KernelSU disable/enable
