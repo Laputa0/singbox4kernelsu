@@ -1,20 +1,25 @@
 {
-"dns": {
-  "servers": [
-    {
-      "tag": "dns_block",
-      "address": "rcode://refused"
-    },
-    {
-      "tag": "dns_direct",
-      "address": "https://223.5.5.5/dns-query",
-      "detour": "net_direct"
-    },
-    {
-      "tag": "dns_proxy",
-      "address": "https://1.1.1.1/dns-query",
-      "detour": "proxy_default"
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns-direct",
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "net_direct"
+            },
+            {
+                "tag": "dns-remote",
+                "address": "https://1.1.1.1/dns-query",
+                "detour": "net_direct"
+            }
+        ],
+        "rules": [
+            {
+                "rule_set": [
+                    "geosite-cn"
+                ],
+                "server": "dns-direct"
+            }
+        ],
+        "final": "dns-remote"
     }
-  ]
-}
 }

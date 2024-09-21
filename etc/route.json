@@ -1,13 +1,13 @@
 {
   "route": {
     "rules": [
-      {
-        "rule_set": [
-          "geosite-adblockplus",
-          "geoip-ad"
-        ],
-        "outbound": "net_block"
-      },
+      // {
+      //   "rule_set": [
+      //     "geosite-adblockplus",
+      //     "geoip-ad"
+      //   ],
+      //   "outbound": "net_block"
+      // },
       {
         "ip_is_private": true,
         "outbound": "net_direct"

@@ -3,91 +3,69 @@
         "rule_set": [
             {
                 "tag": "geoip-cn",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geoip-cn.srs"
             },
             {
                 "tag": "geoip-telegram",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/telegram.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/telegram.srs"
             },
             {
                 "tag": "geosite-cn",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-cn.srs"
             },
             {
                 "tag": "geosite-!cn",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-geolocation-!cn.srs"
             },
             {
                 "tag": "geoip-ad",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-ad.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geoip-ad.srs"
             },
             {
                 "tag": "geosite-adblockplus",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-adblockplus.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-adblockplus.srs"
             },
             {
                 "tag": "geosite-google",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-google.srs"
             },
             {
                 "tag": "geosite-openai",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-openai.srs"
             },
             {
                 "tag": "geosite-youtube",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-youtube.srs"
             },
             {
                 "tag": "geosite-microsoft",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-microsoft.srs"
             },
             {
                 "tag": "geosite-telegram",
-                "type": "remote",
+                "type": "local",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs",
-                "download_detour": "proxy_default",
-                "update_interval": "1d"
+                "path": "RULE_SETS_PATH/geosite-telegram.srs"
             }
         ]
     }
